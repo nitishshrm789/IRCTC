@@ -1,12 +1,237 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <!-- <title>Responsive Sidebar Menu</title> -->
+    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IRCTC Next Generation eTicketing System</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h3 class="head3">Booking A Ticket</h3>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  </head>
+  <body>
+    <nav>
+      <div class="navbar">
+        <div class="irctcLogo">
+          <img src="images/irctc login.png" alt="Irctc logo">
+        </div>
+        <div class="indianRailway">
+          <img src="images/indian_railway_image.webp" alt="Indian railway image">
+        </div>
+      </div>
+    </nav>
+    <input type="checkbox" id="check">
+    <label for="check">
+      <i class="fas fa-bars" id="btn1"></i>
+      <i class="fas fa-times" id="cancel1"></i>
+    </label>
+    
+    <div class="sidebar">
+      <header>
+        <h3>My Menu</h3>
+      </header>
+      <a href="#" class="active">
+        <i class="fas fa-qrcode"></i>
+        <span>LOGIN</span>
+      </a>
+      <a href="#">
+        <i class="fas fa-link"></i>
+        <span>Shortcuts</span>
+      </a>
+      <a href="#">
+        <i class="fas fa-stream"></i>
+        <span>Overview</span>
+      </a>
+      <a href="#">
+         <i class="fas fa-calendar"></i>
+        <span>Events</span>
+      </a>
+      <a href="#">
+        <i class="far fa-question-circle"></i>
+        <span>About</span>
+      </a>
+      <a href="#">
+        <i class="fas fa-sliders-h"></i>
+        <span>Services</span>
+      </a>
+      <a href="#">
+        <i class="far fa-envelope"></i>
+        <span>Contact</span>
+      </a>
+    </div>
+    <div class="vandeBharatImage">
+      <!-- <h2>INDIAN RAILWAYS</h2> -->
+      <h2>
+        <ul>
+          <li>I</li>
+          <li>N</li>
+          <li>D</li>
+          <li>I</li>
+          <li>A</li>
+          <li>N</li>
+          <li>R</li>
+          <li>A</li>
+          <li>I</li>
+          <li>L</li>
+          <li>W</li>
+          <li>A</li>
+          <li>Y</li>
+          <li>S</li>
+        </ul>
+      </h2>
+      <h4>Safety | Security | Punctuality</h4>
+      <div class="pnr_status">
+        <div class="bag">
+          <i class="fas fa-check"></i>
+        </div>
+        <div class="pnr_text">
+          <a href=""><h3> PNR STATUS</h3></a>
+        </div>        
+      </div>
+
+      <div class="charts_vaccancy">
+        <div class="bag">
+          <i class="fas fa-check"></i>
+        </div>
+        <div class="inner_charts_vaccancy">
+          <a href=""><h3>CHARTS/VACANCY</h3></a>
+        </div>        
+      </div>
+
+      <div class="form">
+        <div class="azaadi_ka_mahotsav"></div>
+        <div class="Book_tkt"><p>BOOK TICKET</p></div>
+        <div class="g20"></div>
+        <div class="final_form">
+          <form>
+            <label for="source">
+              Source
+              <span class="icon">&#128205;</span>
+              <input type="text" id="source" name="source" required>
+            </label>
+        
+            <label for="destination">
+              Destination
+              <span class="icon">&#127760;</span>
+              <input type="text" id="destination" name="destination" required>
+            </label>
+        
+            <label for="category">General Category</label>
+            <select id="category" name="category">
+              <option value="default">General</option>
+              <option value="ladies">Ladies</option>
+              <option value="sr-citizen">Lower Birth/Sr Citizen</option>
+              <option value="disability">Person with Disability</option>
+              <option value="duty-pass">Duty Pass</option>
+              <option value="tatkal">Tatkal</option>
+              <option value="premium-tatkal">Premium Tatkal</option>
+            </select>
+        
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date" value="2023-12-20">
+        
+            <label for="category">All Classes</label>
+            <select id="category" name="category">
+              <option value="default">All Classes</option>
+              <option value="ladies">Anubhuti Class (EA)</option>
+              <option value="sr-citizen">AC First Class (1A) </option>
+              <option value="disability">Vistadome AC (EV)</option>
+              <option value="duty-pass">Exec. Chair Car (EC)</option>
+              <option value="tatkal">AC 2 Tier (2A)</option>
+              <option value="premium-tatkal">First Class (FC)</option>
+              <option value="premium-tatkal">AC 3 Tier (3A)</option>
+              <option value="premium-tatkal">AC 3 Economy (3E)</option>
+              <option value="premium-tatkal">Vistadome Chair Car (VC)</option>
+              <option value="premium-tatkal">AC Chair car (CC)</option>
+              <option value="premium-tatkal">Sleeper (SL)</option>
+              <option value="premium-tatkal">Vistadome Non AC (VS)</option>
+              <option value="premium-tatkal">Second Sitting (2S)</option>
+            </select>
+        
+            <div class="checkbox-group">
+              <label>
+                <input type="checkbox" name="disability-concession"> Person with Disability Concession
+              </label>
+              <label>
+                <input type="checkbox" name="flexible-date"> Flexible with Date
+              </label>
+              <label>
+                <input type="checkbox" name="available-berth"> Train with Available Berth
+              </label>
+              <label>
+                <input type="checkbox" name="railway-pass-concession"> Railway Pass Concession
+              </label>
+            </div>
+        
+            <button type="button" class="search-btn">Search</button>
+            <button type="button" class="try-booking-btn">Try Booking in Ask DISHA 2.0</button>
+          </form>
+        </div>
+
+
+
+      </div>
+      
+    </div>
+    <div class="icon_Section">
+      <h2 _ngcontent-ney-c70="">Have you not found the right one?<br>Find a service suitable for you here.</h2>
+      <div class="icons">
+        <div class="icons1">
+          <div class="flight_both">
+            <div class="flight"></div>
+            <label for="FLIGHTS">FLIGHTS</label>
+          </div>
+
+          <div class="hotels_both">
+            <div class="hotels"></div>
+            <label for="HOTELS">HOTELS</label>
+          </div>
+
+          <div class="rail_drishti_both">
+            <div class="rail_drishti"></div>
+            <label for="RAIL DRISHTI">RAIL <br> DRISHTI</label>
+          </div>
+
+          <div class="e-catering-both">
+            <div class="e-catering"></div>
+            <label for="E-CATERING">E-CATERING</label>
+          </div>
+
+          <div class="bus_both">
+            <div class="bus"></div> 
+            <label for="BUS">BUS</label>
+          </div>
+          
+        </div>
+        
+        <div class="icons2">
+
+            <div class="holiday_packages_both">
+              <div class="holiday_packages"></div>
+              <label for="HOLIDAY PACKAGES">HOLIDAY PACKAGES</label>
+            </div>
+  
+            <div class="tourist_train_both">
+              <div class="tourist_train"></div>
+              <label for="TOURIST TRAIN">TOURIST TRAIN</label>
+            </div>
+  
+            <div class="hill_railways_both">
+              <div class="hill_railways"></div>
+              <label for="HILL RAILWAYS">HILL RAILWAYS</label>
+            </div>
+  
+            <div class="charter_train-both">
+              <div class="charter_train"></div>
+              <label for="CHARTER TRAIN">CHARTER TRAIN</label>
+            </div>
+  
+            <div class="gallery_both">
+              <div class="gallery"></div>
+              <label for="GALLERY">GALLERY</label>
+            </div>
+        </div>
+        </div>
+    </div>
 </body>
 </html>

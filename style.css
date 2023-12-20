@@ -1,3 +1,650 @@
-.head3{
-    color: red;
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600|Open+Sans:600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  
+}
+
+
+.sidebar{
+  position: fixed;
+  width: 240px;
+  left: -240px;
+  height: 100%;
+  background: #1e1e1e;
+  transition: all .7s ease;
+  
+}
+.sidebar header{
+  font-size: 28px;
+  color: white;
+  line-height: 70px;
+  text-align: center;
+  background: #1b1b1b;
+  user-select: none;
+  font-family: 'Montserrat', sans-serif;
+}
+.sidebar a{
+  display: block;
+  height: 65px;
+  width: 100%;
+  color: white;
+  line-height: 65px;
+  padding-left: 30px;
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+  border-top: 1px solid rgba(255,255,255,.1);
+  border-left: 5px solid transparent;
+  font-family: 'Open Sans', sans-serif;
+  transition: all .5s ease;
+}
+a.active,a:hover{
+  border-left: 5px solid #b93632;
+  color: #b93632;
+}
+.sidebar a i{
+  font-size: 23px;
+  margin-right: 16px;
+}
+.sidebar a span{
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+#check{
+  display: none;
+}
+label #btn1,label #cancel1{
+  position: absolute;
+  cursor: pointer;
+  color: gray !important;
+  border-radius: 5px;
+  border: 1px solid #262626;
+  margin: 15px 30px;
+  font-size: 29px;
+  background: white;
+  height: 45px;
+  width: 45px;
+  text-align: center;
+  line-height: 45px;
+  transition: all .5s ease;
+  z-index: 1000px;
+}
+label #cancel1{
+  opacity: 0;
+  visibility: hidden;
+}
+#check:checked ~ .sidebar{
+  left: 0;
+}
+#check:checked ~ label #btn1{
+  margin-left: 245px;
+  opacity: 0;
+  visibility: hidden;
+}
+#check:checked ~ label #cancel1{
+  margin-left: 245px;
+  opacity: 1;
+  visibility: visible;
+}
+@media(max-width : 860px){
+  .sidebar{
+    height: auto;
+    width: 70px;
+    left: 0;
+    margin: 100px 0;
+  }
+  header,#btn1,#cancel1{
+    display: none;
+  }
+  span{
+    position: absolute;
+    margin-left: 23px;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .sidebar a{
+    height: 60px;
+  }
+  .sidebar a i{
+    margin-left: -10px;
+  }
+  a:hover {
+    width: 200px;
+    background: inherit;
+  }
+  .sidebar a:hover span{
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+ .navbar{
+  height: 100px;
+  width: 100%;
+  background-color: white;
+  position: absolute;
+}
+
+.irctcLogo{
+  position: absolute;
+  height: 70px;
+  width: 70px;
+  /* background-color: aqua; */
+  right: 220px;
+  top: 15px;
+}
+.irctcLogo img{
+  height: 70px;
+  width: 70px;
+}
+.indianRailway{
+  position: absolute;
+  height: 70px;
+  width: 70px;
+  /* background-color: aqua; */
+  right: 90px;
+  top: 15px;
+  transition: .5s ease ;
+}
+
+.indianRailway img {
+  height: 70px;
+  width: 70px;
+}
+
+.vandeBharatImage{
+  background-image: url('images/vande_bharat_images.jpeg');
+  height: 900px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+ul
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+ul li {
+  list-style: none;
+  font-family: arial;
+  letter-spacing: 7px;
+  text-shadow: none;
+  animation: animate 1s infinite linear;
+}
+
+@keyframes animate
+{
+  0% {
+    color: #FF9933; /* Saffron */
+}
+
+18% {
+    color: #ffffff; /* White */
+}
+
+20% {
+    color: #138808; /* Green */
+    text-shadow: 0 0 7px #228B22, 0 0 20px #0B6623;
+}
+
+    30%
+    {
+        color: #484848;
+        text-shadow: none;
+    }
+
+    35%
+    {
+        color: #484848;
+        text-shadow: 0 0 #539dbf , 0 0 20px #077b88;
+    }
+
+    70%
+    {
+        color: #484848;
+        text-shadow: none;
+    }
+
+    85%
+    {
+        color: #484848;
+        text-shadow: 0 0 7px #539dbf , 0 0 20px #077b88;
+    }
+
+    90%
+    {
+        color: #484848;
+        text-shadow: none;
+    }
+
+    100%
+    {
+        color: #484848;
+        text-shadow: none;
+    }
+}
+ul li:nth-child(1)
+{
+    animation-delay: .2s;
+}
+
+ul li:nth-child(2)
+{
+    animation-delay: .4s;
+}
+
+ul li:nth-child(3)
+{
+    animation-delay: .6s;
+}
+
+ul li:nth-child(4)
+{
+    animation-delay: .8s;
+}
+
+ul li:nth-child(5)
+{
+    animation-delay: .1s;
+}
+
+ul li:nth-child(6)
+{
+    animation-delay: 1.2s;
+    letter-spacing: 20px;
+}
+
+ul li:nth-child(7)
+{
+    animation-delay: 1.4s;
+}
+
+ul li:nth-child(8)
+{
+    animation-delay: 1.6s;
+}
+
+ul li:nth-child(9)
+{
+    animation-delay: 1.8s;
+}
+
+ul li:nth-child(10)
+{
+    animation-delay: 2.0s;
+}
+
+ul li:nth-child(11)
+{
+    animation-delay: 2.2s;
+}
+
+ul li:nth-child(12)
+{
+    animation-delay: 2.4s;
+}
+
+ul li:nth-child(13)
+{
+    animation-delay: 2.6s;
+}
+
+ul li:nth-child(14)
+{
+    animation-delay: 2.8s;
+}
+
+.vandeBharatImage h2 {
+  position: absolute;
+  top: 140px;
+  letter-spacing: 4px;
+  left: 300px;
+  transform: translate(-50%, -50%);
+  color: #1b1b1b; /* Add a color to make the text visible on the image */
+  font-size: 45px;
+}
+
+.vandeBharatImage h4 {
+  position: absolute;
+  top: 200px;
+  letter-spacing: 4px;
+  left: 300px;
+  transform: translate(-50%, -50%);
+  color: #1b1b1b; /* Add a color to make the text visible on the image */
+  font-size: 23px;
+}
+
+.bag {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background-color: #ccc; /* Adjust the background color of the bag */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bag i {
+  color: whie; /* Adjust the color of the tick mark */
+  font-size: 24px; /* Adjust the size of the tick mark */
+}
+
+
+.pnr_status{
+  padding: 5px;
+  padding-top: 5px;
+  width: 235px;
+  height: 35px;
+  background-color: blue;
+  position: absolute;
+  top: 160px;
+  left: 650px;
+}
+.pnr_text{  
+  top: 15px;
+  left: 80px;
+  position: absolute;
+}
+
+.pnr_status h3{
+  color: whitesmoke;
+  text-align: center;
+  padding: -50px;
+  top: 600px;
+}
+
+
+
+.charts_vaccancy{
+  padding: 5px;
+  padding-top: 5px;
+  width: 235px;
+  height: 35px;
+  background-color: blue;
+  position: absolute;
+  top: 160px;
+  margin-left: 50px;
+}
+.inner_charts_vaccancy{  
+  top: 15px;
+  left: 80px;
+  position: absolute;
+}
+
+.inner_charts_vaccancy h3{
+  color: whitesmoke;
+  text-align: center;
+  padding: -50px;
+  top: 600px;
+}
+
+
+
+
+
+
+
+.charts_vaccancy{
+  padding: 5px;
+  padding-top: 5px;
+  width: 250px;
+  height: 35px;
+  background-color: blue;
+  position: absolute;
+  top: 160px;
+  left: 870px;
+}
+ .inner_charts_vaccancy{
+  color: whitesmoke;
+  text-align: center;
+  padding: -100px;
+  top: 600px;
+  
+}
+.inner_charts_vaccancy h3{
+  color: whitesmoke;
+  text-align: center;
+  /* padding: -50px; */
+  top: -585px;
+  left: -30px;
+  position: absolute;
+}
+
+.form{
+  background-color: white;
+  position: absolute;
+  height: 570px;
+  width: 530px;
+  left: 650px;
+  top: 206px;
+}
+
+.azaadi_ka_mahotsav{
+  position: absolute;
+  height: 90px;
+  width: 144px;
+  left: 10px;
+  background-color: white;
+  background-image: url('images/Azaadi_ka_mahotsav.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-color: blue; */
+
+}
+.Book_tkt{
+  position: absolute;
+  height: 90px;
+  width: 183px;
+  /* background-color: red; */
+  background-color: white;
+  left: 165px;
+}
+.Book_tkt p{
+  font-size: 27px;
+  padding-top: 30px;
+}
+
+.g20{
+  position: absolute;
+  height: 90px;
+  width: 150px;
+  background-color: white;
+  left: 360px;
+  background-image: url('images/G20.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-color: blue; */
+}
+.final_form{
+  position: absolute;
+  height: 480px;
+  width: 530px;
+  top: 90px;
+  /* background-color: #ccc; */
+}
+
+
+
+
+
+
+
+
+
+.final_form form {
+  max-width: 600px;
+  margin: 2px auto;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 0px 0px 20px 20px;
+}
+
+.final_form label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="date"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+}
+
+.final_form select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+}
+
+.icon {
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.checkbox-group {
+  margin-bottom: 12px;
+}
+
+.checkbox-group label {
+  display: block;
+}
+
+.final_form button {
+  padding: 10px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-right: 92px;
+}
+
+.final_form .search-btn {
+  background-color: orange;
+}
+
+.try-booking-btn {
+  background-color: green;
+}
+
+.icon_Section {
+    padding: 0px 10px;
+    text-align: center;
+    height: 600px;
+    width: 100%;
+    position: absolute;
+    /* background-color: gray; */
+    
+}
+.icons{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.icon_Section h2 {
+  margin-top: 55px;
+  font-size: 34px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  font-family: Body, Quicksand, sans-serif !important;
+}
+
+.icons1{
+  position: absolute;
+  height: 200px;
+  width: 1000px;
+  /* background-color: red; */
+
+  display: flex;
+}
+
+.icons2{
+  position: absolute;
+  height: 200px;
+  width: 1000px;
+  top: 370px;
+  /* background-color: blue; */
+  display: flex;
+}
+
+
+
+ .flight, .hotels, .rail_drishti, .e-catering, .bus, .holiday_packages, .tourist_train, .hill_railways, .charter_train, .gallery{
+    width: 100px;
+    height: 100px;
+    /* background-color: #3498db; */
+    border-radius: 50%;
+    margin: 50px;
+    border: 2px solid black;
+}
+
+.flight{
+  background: url('images/Icons/flight.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hotels{
+  background: url('images/Icons/hotels.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.rail_drishti{
+  background: url('images/Icons/rail_drishti.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.e-catering{
+  background: url('images/Icons/e-catering.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bus{
+  background: url('images/Icons/bus.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.holiday_packages{
+  background: url('images/Icons/holiday_packages.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.tourist_train{
+  background: url('images/Icons/tourist_train.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hill_railways{
+  background: url('images/Icons/hill_railways.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.charter_train{
+  background: url('images/Icons/charter_train.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.gallery{
+  background: url('images/Icons/gallery.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
