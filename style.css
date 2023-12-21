@@ -13,6 +13,7 @@
   left: -240px;
   height: 100%;
   background: #1e1e1e;
+  z-index: 6;
   transition: all .7s ease;
   
 }
@@ -171,7 +172,7 @@ ul
     padding: 0;
     display: flex;
 }
-ul li {
+.vandeBharatImage ul li {
   list-style: none;
   font-family: arial;
   letter-spacing: 7px;
@@ -581,70 +582,626 @@ input[type="date"] {
 
 
  .flight, .hotels, .rail_drishti, .e-catering, .bus, .holiday_packages, .tourist_train, .hill_railways, .charter_train, .gallery{
-    width: 100px;
-    height: 100px;
-    /* background-color: #3498db; */
-    border-radius: 50%;
-    margin: 50px;
-    border: 2px solid black;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 50px;
+  border: 2px solid black;
+  /* background-color: white; */
+  box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.3);
 }
 
 .flight{
-  background: url('images/Icons/flight.gif');
+  background: url('images/Icons/flight1.png');
   background-size: cover;
   background-repeat: no-repeat;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease;
+  display: inline-block;
+}
+
+.flight:hover{
+  transform: scale(1.2); 
+}
+
+.flight_both label{
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: larger;
 }
 
 .hotels{
-  background: url('images/Icons/hotels.gif');
+  background: url('images/Icons/hotels1.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  transition: transform 0.5s ease;
+}
+
+.hotels:hover{
+  transform: scale(1.2); 
+}
+
+.hotels_both label{
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: larger;
 }
 
 .rail_drishti{
-  background: url('images/Icons/rail_drishti.gif');
+  background: url('images/Icons/rail_drishti1.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  transition: transform 0.5s ease;
+}
+
+.rail_drishti:hover{
+  transform: scale(1.2); 
+}
+
+.rail_drishti_both label{
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: larger;
 }
 
 .e-catering{
-  background: url('images/Icons/e-catering.gif');
+  background: url('images/Icons/e-catering1.png');
   background-size: cover;
   background-repeat: no-repeat;
+  transition: transform 0.5s ease;
+}
+
+.e-catering:hover{
+  transform: scale(1.2); 
+}
+
+.e-catering-both label{
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: larger;
 }
 
 .bus{
-  background: url('images/Icons/bus.gif');
+  background: url('images/Icons/bus1.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  transition: transform 0.5s ease;
+}
+
+.bus:hover{
+  transform: scale(1.2); 
+}
+
+.bus_both label{
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: larger;
 }
 
 .holiday_packages{
-  background: url('images/Icons/holiday_packages.gif');
+  background: url('images/Icons/holiday_packages.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  transition: transform 0.5s ease;
+}
+
+.holiday_packages:hover{
+  transform: scale(1.2); 
+}
+
+.holiday_packages_both label{
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: larger;
 }
 
 .tourist_train{
-  background: url('images/Icons/tourist_train.gif');
+  background: url('images/Icons/tourist_train1.png');
   background-size: cover;
   background-repeat: no-repeat;
+  transition: transform 0.5s ease;
+}
+
+.tourist_train:hover{
+  transform: scale(1.2); 
+}
+
+.tourist_train_both label{
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: larger;
 }
 
 .hill_railways{
-  background: url('images/Icons/hill_railways.gif');
+  background: url('images/Icons/hill_railways1.webp');
   background-size: cover;
   background-repeat: no-repeat;
+  transition: transform 0.5s ease;
+}
+
+.hill_railways:hover{
+  transform: scale(1.2); 
+}
+
+.hill_railways_both label{
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: larger;
 }
 
 .charter_train{
-  background: url('images/Icons/charter_train.gif');
+  background: url('images/Icons/charter_train12.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: transform 0.5s ease;
+}
+
+.charter_train:hover{
+  transform: scale(1.2); 
+}
+
+.charter_train-both label{
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: larger;
+}
+
+.gallery{
+  background: url('images/Icons/gallery1.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: transform 0.5s ease;
+}
+
+.gallery:hover{
+  transform: scale(1.2); 
+}
+
+.gallery_both label{
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: larger;
+}
+
+.holidays{
+  position: absolute;
+  height: 1500px;
+  width: 1180px;
+  /* background-color: red; */
+  top: 1510px;
+  left: 30px;
+}
+
+.section{
+  position: absolute;
+  /* left: 100px; */
+  margin-right: 200px;
+  height: 100px;
+  width: 1100px;
+  /* background-color: red; */
+  right: -75px;
+}
+
+@keyframes animate1
+{
+  0%
+  {
+    transform: rotate(0deg);
+  }
+  100%
+  {
+    transform: rotate(180deg);
+  }
+}
+
+.holidays h1{
+  font-size: 50px;
+  padding-left: 500px;
+  padding-top: 25px;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.maharajas_express{
+  position: absolute;
+  height: 630px;
+  width: 320px;
+  background-color: whitesmoke;
+  left: 40px;
+  top: 120px;
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 1s ease;
+}
+
+.maharajas_express:hover {
+  transform: scale(0.8); 
+}
+
+.maharajas_express a{
+  text-decoration: none; 
+  color: black; 
+  font-weight: bold; 
+  font-size: 20px;
+  
+}
+
+.maharajas_express .img1{
+  position: absolute;
+  height: 300px;
+  width: 320px;
+  /* background-color: green; */
+  background-image: url('images/Holidays/Maharajas_express.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-.gallery{
-  background: url('images/Icons/gallery.gif');
+.maharajas_express h2{
+  margin-top: 310px;
+  margin-left: 50px;
+}
+
+.maharajas_express p{
+  font-size: 19px;
+  line-height: 1.1;
+  text-align: justify;
+  padding: 0 2px;
+  margin: 0 7px;
+}
+
+.International_Packages{
+  position: absolute;
+  height: 630px;
+  width: 320px;
+  background-color: whitesmoke;
+  left: 430px;
+  top: 120px;
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 1s ease;
+}
+
+.International_Packages:hover {
+  transform: scale(0.8); 
+}
+
+.International_Packages a{
+  text-decoration: none; /* Remove default underline for links */
+  color: black; /* Set link color to your preference */
+  font-weight: bold; /* Make the link text bold */
+  font-size: 20px;
+  
+}
+
+.International_Packages .img2{
+  position: absolute;
+  height: 300px;
+  width: 320px;
+  /* background-color: green; */
+  background-image: url('images/Holidays/international_packages.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.International_Packages h2{
+  margin-top: 310px;
+  margin-left: 50px;
+}
+
+.International_Packages p{
+  font-size: 19px;
+  line-height: 1.2;
+  text-align: justify;
+  padding: 0 2px;
+  margin: 0 7px;
+}
+
+.Domestic_Air_Packages{
+  position: absolute;
+  height: 630px;
+  width: 320px;
+  background-color: whitesmoke;
+  left: 820px;
+  top: 120px;
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 1s ease;
+}
+
+.Domestic_Air_Packages:hover {
+  transform: scale(0.8); 
+}
+
+.Domestic_Air_Packages a{
+  text-decoration: none; /* Remove default underline for links */
+  color: black; /* Set link color to your preference */
+  font-weight: bold; /* Make the link text bold */
+  font-size: 20px;
+  
+}
+
+.Domestic_Air_Packages .img3{
+  position: absolute;
+  height: 300px;
+  width: 320px;
+  /* background-color: green; */
+  background-image: url('images/Holidays/domestic_air_packages.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.Domestic_Air_Packages h2{
+  margin-top: 310px;
+  margin-left: 50px;
+}
+
+.Domestic_Air_Packages p{
+  font-size: 19px;
+  line-height: 1.2;
+  text-align: justify;
+  padding: 0 2px;
+  margin: 0 7px;
+}
+
+.Bharat_Gaurav_Tourist_Train{
+  position: absolute;
+  height: 630px;
+  width: 320px;
+  background-color: whitesmoke;
+  left: 40px;
+  top: 810px;
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 1s ease;
+}
+
+.Bharat_Gaurav_Tourist_Train:hover {
+  transform: scale(0.8); 
+}
+
+.Bharat_Gaurav_Tourist_Train a{
+  text-decoration: none; /* Remove default underline for links */
+  color: black; /* Set link color to your preference */
+  font-weight: bold; /* Make the link text bold */
+  font-size: 20px;
+  
+}
+
+.Bharat_Gaurav_Tourist_Train .img4{
+  position: absolute;
+  height: 300px;
+  width: 320px;
+  /* background-color: green; */
+  background-image: url('images/Holidays/Bharat_Gaurav_tourist_train.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.Bharat_Gaurav_Tourist_Train h2{
+  margin-top: 310px;
+  margin-left: 50px;
+}
+
+.Bharat_Gaurav_Tourist_Train p{
+  font-size: 19px;
+  line-height: 1.2;
+  text-align: justify;
+  padding: 0 2px;
+  margin: 0 7px;
+}
+
+.Rail_Tour_Packages{
+  position: absolute;
+  height: 630px;
+  width: 320px;
+  background-color: whitesmoke;
+  left: 430px;
+  top: 810px;
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 1s ease;
+}
+
+.Rail_Tour_Packages:hover {
+  transform: scale(0.8); 
+}
+
+.Rail_Tour_Packages a{
+  text-decoration: none; /* Remove default underline for links */
+  color: black; /* Set link color to your preference */
+  font-weight: bold; /* Make the link text bold */
+  font-size: 20px;
+  
+}
+
+.Rail_Tour_Packages .img5{
+  position: absolute;
+  height: 300px;
+  width: 320px;
+  /* background-color: green; */
+  background-image: url('images/Holidays/rail_tour_packages.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.Rail_Tour_Packages h2{
+  margin-top: 310px;
+  margin-left: 50px;
+}
+
+.Rail_Tour_Packages p{
+  font-size: 19px;
+  line-height: 1.1;
+  text-align: justify;
+  padding: 0 2px;
+  margin: 0 7px;
+}
+
+.socialmedia{
+  position: absolute;
+  width: 98%;
+  height: auto;
+  background-color: red;
+  top: 2970px;
+  margin-left: 10px;
+}
+
+.pointer{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  /* background: rgba(255, 255, 255, .1); */
+  /* background: rgb(54, 51, 51,0.1); */
+  border: 1px solid black ;
+  box-sizing: border-box;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  pointer-events: none;
+  /* animation: animate 0.2s linear infinite; */
+  transition: 0.2s;   
+}
+
+.pointer1
+{
+  transition: 0.05s;
+}
+.pointer2
+{
+  transition: 0.1s;
+}
+.pointer3
+{
+  transition: 0.15s;
+}
+.pointer4
+{
+  transition: 0.2s;
+}
+.pointer5
+{
+  transition: 0.25s;
+} 
+
+.container{
+  max-width: 1170px;
+  margin: auto;
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul{
+  list-style: none;
+}
+
+.social_media{
+  position: absolute;
+  top: 3000px;
+  height: 100px;
+  width: 100%;
+  background-color: rgba(220, 237, 217, 0.1);
+  text-decoration: none;
+}
+
+.social_media h3{
+  /* text-align: left; */
+  padding-top: 40px;
+  padding-left: 200px;
+
+}
+
+.facebook1{
+  position: absolute;
+  top: 25px;
+  border-radius: 50%;
+  /* background-color: blue; */
+  height: 60px;
+  width: 60px;
+  left: 580px;
+}
+
+.facebook1 img{
+  height: 40px;
+  width: 40px;
+}
+
+.youtube1{
+  position: absolute;
+  top: 25px;
+  border-radius: 50%;
+  /* background-color: blue; */
+  height: 60px;
+  width: 60px;
+  left: 642px;
+}
+
+.youtube1 img{
+  height: 40px;
+  width: 40px;
+}
+
+.instagram1{
+  position: absolute;
+  top: 25px;
+  border-radius: 50%;
+  /* background-color: blue; */
+  height: 60px;
+  width: 60px;
+  left: 704px;
+}
+
+.instagram1 img{
+  height: 40px;
+  width: 40px;
+}
+
+.linkedin1{
+  position: absolute;
+  top: 25px;
+  border-radius: 50%;
+  /* background-color: blue; */
+  height: 60px;
+  width: 60px;
+  left: 766px;
+}
+
+.linkedin1 img{
+  height: 40px;
+  width: 40px;
+}
+
+.twitter1{
+  position: absolute;
+  top: 25px;
+  border-radius: 50%;
+  /* background-color: blue; */
+  height: 60px;
+  width: 60px;
+  left: 828px;
+}
+
+.twitter1 img{
+  height: 40px;
+  width: 40px;
+}
+
+.footer123{
+  position: absolute;
+  top: 3100px;
+  height: 80px;
+  width: 100%;
+  /* background-color: red; */
+}
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  background-color: whitesmoke;
+  color: black;
+  text-align: center;
+  padding: 10px;
+}
+
+.footer a {
+  color: #b93632; /* Adjust the link color */
+  text-decoration: none;
+  font-weight: 230px;
+  margin: 0 10px;
+}
+
+.footer a:hover {
+  color: #ff6347; /* Adjust the link color on hover */
 }
