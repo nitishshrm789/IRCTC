@@ -1,37 +1,113 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Animation login form</title>
-	<link rel="stylesheet" type="text/css" href="login.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IRCTC Login</title>
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
-     <div class="image">
-     	
-     	<div class="box">
-     	<span class="borderLine"></span>
-     	<form>
-     		<h2>Login</h2>
-     		<div class="inputBox">
-     			<input type="text" required="required" placeholder="Username">
-     			<span>Username</span>
-     			<i></i>
-     		</div>
-         
-              <div class="inputBox">
-     			<input type="password" required="required" placeholder="Password">
-     			<span>Password</span>
-     			<i></i>
-     		</div>
+    <button id="showLogin">Open Login</button>
 
-     		<div class="links">
-     			<a href="#">Forgot Password</a>
-     			<a href="#">signup</a>
-               </div>
-           <input type="submit" value="Login">
-     	</form>
-     </div>
-     </div>
+    <div id="loginPopup" class="popup">
+        <div class="login-container">
+            <span class="close" id="closeLogin">&times;</span>
+            <form>
+                <h1>Login to IRCTC</h1>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                
+                <button type="submit" class="orange-btn">Sign In</button>
+                
+                <div class="options">
+                    <a href="#">Forgot Account Details</a>
+                </div>
+
+                <div class="buttons">
+                    <button type="button">Register</button>
+                    <button type="button">Agent Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <!-- Three cards above -->
+        <div class="card">
+            <img src="images/trains/Sampark_kranti_express.jpg" alt="Card Image">
+            <div class="card-content">
+                <h2>Sampark Express</h2>
+                <p>The Sampark Express, a lifeline of connectivity, swiftly traverses the vast Indian landscape, fostering unity by bridging distances. With its punctuality and efficiency, it serves as a testament to the seamless integration of diverse cultures and regions across the subcontinent...</p>
+                <a href="#" class="more-link">More</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/trains/Shatabdi_Express.jpg" alt="Card Image">
+            <div class="card-content">
+                <h2>Shatabdi Express</h2>
+                <p>The Shatabdi Express, a symbol of swift connectivity in India, embodies speed, efficiency, and comfort. Designed for short to medium-haul journeys, this premier class of trains offers passengers a delightful blend of speed and service, making every trip a seamless and enjoyable experience...</p>
+                <a href="#" class="more-link">More</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/trains/rajdhani_express.jpg" alt="Card Image">
+            <div class="card-content">
+                <h2>Rajdhani Express</h2>
+                <p>The Rajdhani Express, often hailed as the "King of Trains" in India, is a symbol of speed, luxury, and efficiency. Connecting major cities across the country, it races against time, offering passengers a seamless blend of comfort and swiftness, making every journey a memorable experience on the tracks...</p>
+                <a href="#" class="more-link">More</a>
+            </div>
+        </div>
+        
+        
+
+        <!-- Three cards below -->
+        <div class="card">
+            <img src="images/trains/vande_bharat.jpg" alt="Card Image">
+            <div class="card-content">
+                <h2>Vande Bharat Express</h2>
+                <p>The Vande Bharat Express, a symbol of modern Indian rail innovation, combines speed, comfort, and efficiency. With its sleek design and state-of-the-art features, this high-speed train represents a leap forward in India's railway technology, offering passengers a cutting-edge travel experience that seamlessly blends tradition with progress.</p>
+                <a href="#" class="more-link">More</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/trains/Tejas Express.webp" alt="Card Image">
+            <div class="card-content">
+                <h2>Tejas Express</h2>
+                <p>The Tejas Express, a symbol of speed and modernity in Indian railways, redefines train travel with its sleek design and cutting-edge amenities. From high-speed journeys to state-of-the-art facilities, the Tejas Express is a testament to India's commitment to providing passengers with a premium and comfortable rail experience. Fasten your seatbelts—or should I say seat straps?—for a ride that seamlessly combines speed and luxury...</p>
+                <a href="#" class="more-link">More</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/trains/garibh rath.jpg" alt="Card Image">
+            <div class="card-content">
+                <h2>Garibh Rath Express</h2>
+                <p>The Garib Rath Express, translating to "Poor Man's Chariot," is a dynamic and cost-effective train service in India. Designed with the aim of providing comfortable travel at affordable prices, this express is a symbol of accessibility, ensuring that the joy of train travel is accessible to a broader spectrum of passengers. Fast, efficient, and budget-friendly, the Garib Rath Express is a testament to the commitment of making rail journeys inclusive for all...</p>
+                <a href="#" class="more-link">More</a>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        document.getElementById('showLogin').addEventListener('click', function() {
+            document.getElementById('loginPopup').style.display = 'block';
+        });
+
+        document.getElementById('closeLogin').addEventListener('click', function() {
+            document.getElementById('loginPopup').style.display = 'none';
+        });
+
+        document.addEventListener('click', function(e) {
+            var popup = document.getElementById('loginPopup');
+            var showLoginBtn = document.getElementById('showLogin');
+
+            if (!popup.contains(e.target) && e.target !== showLoginBtn) {
+                popup.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>
