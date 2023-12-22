@@ -69,3 +69,19 @@ body{
     border-radius: 50%;
 
 }
+
+.heading{
+    color: red;
+    position: absolute;
+    height: 100px;
+    width: auto;
+    left: 40%;
+    top: 80%;
+    font-family: sans-serif;
+    font-weight: 800;
+    font-size: larger;
+}
+
+.heading h2{
+    font-size: 40px;
+}
