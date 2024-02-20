@@ -5,8 +5,6 @@
   text-decoration: none;
   
 }
-
-
 .sidebar{
   position: fixed;
   width: 240px;
@@ -161,7 +159,6 @@ label #cancel1{
   background-size: cover;
   background-repeat: no-repeat;
 }
-
 ul
 {
     position: absolute;
@@ -301,7 +298,6 @@ ul li:nth-child(14)
 {
     animation-delay: 2.8s;
 }
-
 .vandeBharatImage h2 {
   position: absolute;
   top: 140px;
@@ -336,8 +332,6 @@ ul li:nth-child(14)
   color: whie; /* Adjust the color of the tick mark */
   font-size: 24px; /* Adjust the size of the tick mark */
 }
-
-
 .pnr_status{
   padding: 5px;
   padding-top: 5px;
@@ -360,9 +354,6 @@ ul li:nth-child(14)
   padding: -50px;
   top: 600px;
 }
-
-
-
 .charts_vaccancy{
   padding: 5px;
   padding-top: 5px;
@@ -385,12 +376,6 @@ ul li:nth-child(14)
   padding: -50px;
   top: 600px;
 }
-
-
-
-
-
-
 
 .charts_vaccancy{
   padding: 5px;
@@ -470,15 +455,6 @@ ul li:nth-child(14)
   top: 90px;
   /* background-color: #ccc; */
 }
-
-
-
-
-
-
-
-
-
 .final_form form {
   max-width: 600px;
   margin: 2px auto;
@@ -530,23 +506,18 @@ input[type="date"] {
   font-size: 16px;
   margin-right: 92px;
 }
-
 .final_form .search-btn {
   background-color: orange;
 }
-
 .try-booking-btn {
   background-color: green;
 }
-
 .icon_Section {
     padding: 0px 10px;
     text-align: center;
     height: 600px;
     width: 100%;
     position: absolute;
-    /* background-color: gray; */
-    
 }
 .icons{
   display: flex;
@@ -560,37 +531,27 @@ input[type="date"] {
   margin-bottom: 25px;
   font-family: Body, Quicksand, sans-serif !important;
 }
-
 .icons1{
   position: absolute;
   height: 200px;
   width: 1000px;
-  /* background-color: red; */
-
   display: flex;
 }
-
 .icons2{
   position: absolute;
   height: 200px;
   width: 1000px;
   top: 370px;
-  /* background-color: blue; */
   display: flex;
 }
-
-
-
  .flight, .hotels, .rail_drishti, .e-catering, .bus, .holiday_packages, .tourist_train, .hill_railways, .charter_train, .gallery{
   width: 100px;
   height: 100px;
   border-radius: 50%;
   margin: 50px;
   border: 2px solid black;
-  /* background-color: white; */
   box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.3);
 }
-
 .flight{
   background: url('images/Icons/flight1.png');
   background-size: cover;
@@ -599,43 +560,35 @@ input[type="date"] {
   transition: transform 0.5s ease;
   display: inline-block;
 }
-
 .flight:hover{
   transform: scale(1.2); 
 }
-
 .flight_both label{
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   font-size: larger;
 }
-
 .hotels{
   background: url('images/Icons/hotels1.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   transition: transform 0.5s ease;
 }
-
 .hotels:hover{
   transform: scale(1.2); 
 }
-
 .hotels_both label{
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   font-size: larger;
 }
-
 .rail_drishti{
   background: url('images/Icons/rail_drishti1.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   transition: transform 0.5s ease;
 }
-
 .rail_drishti:hover{
   transform: scale(1.2); 
 }
-
 .rail_drishti_both label{
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   font-size: larger;
